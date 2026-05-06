@@ -5,9 +5,6 @@ A modern, production-grade portfolio site built with **Next.js 14 (App Router)**
 ---
 
 ## ✨ Features
-
-- **Fullscreen 3D hero** with your `hero.glb` model
-- **Clickable TVs** via raycasting (R3F pointer events)
 - **Floating animation** — each TV bobs with a unique phase
 - **Hover feedback** — scale + emissive glow on hover
 - **Camera parallax** — subtle movement following the mouse
@@ -29,8 +26,6 @@ chadi-portfolio/
 │   ├── layout.tsx           # Root layout with Lenis + cursor
 │   └── page.tsx             # Main page assembly
 ├── components/
-│   ├── Scene.tsx            # R3F Canvas + lighting
-│   ├── TVModel.tsx          # GLB loader + click/hover logic
 │   ├── Navbar.tsx           # Fixed navigation
 │   ├── Footer.tsx           # Site footer
 │   ├── CustomCursor.tsx     # Animated cursor
@@ -41,9 +36,8 @@ chadi-portfolio/
 │   └── Projects.tsx         # Project grid
 ├── lib/
 │   ├── scroll.ts            # scrollToSection() utility
-│   └── inspectGLB.ts        # Debug helper for mesh names
 └── public/
-    └── hero.glb             # ← PUT YOUR FILE HERE
+    └── hero.mp4             # video mp4
 ```
 
 ---
