@@ -1,0 +1,33 @@
+"use client";
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="bg-bg border-t border-border py-12 px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div>
+          <p className="font-display font-black text-2xl text-accent italic mb-1">Chadi</p>
+          <p className="tv-hint text-muted text-[10px]">Motion Designer · Videastz Studio</p>
+        </div>
+
+        <div className="flex gap-8">
+          {["Behance", "Instagram", "LinkedIn", "Vimeo"].map((link) => (
+            <a
+              key={link}
+              href="#"
+              className="tv-hint text-[10px] text-muted hover:text-accent-warm transition-colors"
+              data-cursor-hover
+            >
+              {link}
+            </a>
+          ))}
+        </div>
+
+        <p className="tv-hint text-[10px] text-muted">
+          © {year} Videastz. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
