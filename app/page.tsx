@@ -13,11 +13,11 @@ export default function Home() {
       <section id="home">
         <HeroSection />
       </section>
-      <section id="about">
-        <About />
-      </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="about">
+        <About />
       </section>
       <Footer />
     </main>

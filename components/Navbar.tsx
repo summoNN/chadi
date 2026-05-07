@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { scrollToSection } from "@/lib/scroll";
-
+import Logo from "@/public/logo.gif";
 const navLinks = [
   { label: "Home", id: "home" },
   { label: "About", id: "about" },
@@ -20,21 +20,21 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "glass-card border-b border-border py-4"
-          : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "glass-card border-b border-border py-4"
+        : "bg-transparent py-6"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
         {/* Logo */}
-        <button
+        <img
           onClick={() => scrollToSection("home")}
-          className="font-mono text-xs tracking-[0.3em] uppercase text-accent-warm hover:text-accent transition-colors"
+          src={Logo.src}
           data-cursor-hover
+          width="64" height="64"
         >
-          Chadi
-        </button>
+
+        </img>
 
         {/* Links */}
         <ul className="flex gap-8">

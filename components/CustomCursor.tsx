@@ -36,10 +36,19 @@ export default function CustomCursor() {
     const onHoverOut = () => setIsHovering(false);
 
     document.addEventListener("mousemove", onMove);
-    document.querySelectorAll("a, button, [data-cursor-hover]").forEach((el) => {
-      el.addEventListener("mouseenter", onHoverIn);
-      el.addEventListener("mouseleave", onHoverOut);
-    });
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+
+      if (
+        target.closest("a, button, [data-cursor-hover]")
+      ) {
+        setIsHovering(true);
+      } else {
+        setIsHovering(false);
+      }
+    };
+
+    document.addEventListener("mouseover", handleMouseOver);
 
     rafRef.current = requestAnimationFrame(animate);
 
@@ -51,27 +60,29 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Dot */}
+      {/* Custom Image Cursor */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999]"
-        style={{ 
-          background: "var(--accent)", 
-          mixBlendMode: "difference",
-          willChange: "transform"
-        }}
-      />
-      {/* Ring */}
-      <div
-        ref={ringRef}
-        className="fixed top-0 left-0 w-10 h-10 rounded-full pointer-events-none z-[9998]"
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
         style={{
-          border: `1px solid ${isHovering ? "var(--accent-warm)" : "rgba(232,213,176,0.4)"}`,
-          background: isHovering ? "rgba(201,169,110,0.05)" : "transparent",
-          transition: "border 0.3s ease, background 0.3s ease",
-          willChange: "transform"
+          willChange: "transform",
+          transition: "transform 0.05s linear"
         }}
-      />
+      >
+        <img
+          src="/cursor.png"
+          alt="cursor"
+          className="w-8 h-8 object-contain"
+          style={{
+            transform: `rotate(35deg) scale(${isHovering ? 1.5 : 1})`,
+            transition: "transform 0.35s cubic-bezier(0.22,1,0.36,1), filter 0.45s ease",
+            filter: isHovering
+              ? "brightness(0) saturate(100%) invert(44%) sepia(95%) saturate(2337%) hue-rotate(8deg) brightness(96%) contrast(101%)"
+              : "none",
+            // Center the image (assuming 32x32 size, we subtract 16px in CustomCursor.tsx logic or here)
+          }}
+        />
+      </div>
     </>
   );
 }
