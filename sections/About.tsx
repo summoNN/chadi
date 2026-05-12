@@ -285,7 +285,7 @@ function ResumeSection() {
                         className="tv-hint text-[9px] tracking-[0.15em] block"
                         style={{ color: "var(--muted)" }}
                       >
-                        {exp.company} — {exp.location}
+                        <span className="tv-hint">{exp.company} — {exp.location}</span>
                       </span>
                     </div>
                   </div>
@@ -351,7 +351,7 @@ function ResumeSection() {
                         className="tv-hint text-[9px] tracking-[0.15em] block"
                         style={{ color: "var(--muted)" }}
                       >
-                        {edu.school} — {edu.location}
+                        <span className="tv-hint">{edu.school} — {edu.location}</span>
                       </span>
                     </div>
                   </div>
@@ -483,7 +483,6 @@ export default function About() {
           {/* Left — bio text */}
           <div className="space-y-8 mt-16">
             <p className="text-lg font-body text-accent/70 leading-relaxed">
-              I&apos;m{" "}
               <span className="text-accent font-medium">Hjij Chadi</span>, Je suis un Expert en Création Digitale, passionné par la transformation d&apos;idées complexes en histoires visuelles percutantes. Fort de plus de sept ans d&apos;expérience dans l&apos;industrie audiovisuelle, je suis spécialisé dans l&apos;ensemble de la chaîne de production : de la captation haut de gamme et l&apos;animation 3D jusqu&apos;à la post-production finale.{" "}
             </p>
             <p className="text-lg font-body text-accent/50 leading-relaxed">
@@ -493,7 +492,7 @@ export default function About() {
             {/* CTA */}
             <div className="pt-4 flex gap-4">
               <a
-                href="mailto:hello@videastz.com"
+                href="mailto:chedyhj@gmail"
                 className="group inline-flex items-center gap-3 px-6 py-3 rounded glass-card text-accent-warm tv-hint hover:bg-accent-warm/10 transition-all duration-300"
                 data-cursor-hover
               >
@@ -520,7 +519,7 @@ export default function About() {
 
           {/* Right — photo */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-76 h-96 lg:w-[36rem] lg:h-[36rem]">
+            <div className="relative w-76 h-96 lg:w-[40rem] lg:h-[36rem]">
               {/* Decorative glow ring */}
               <div
                 className="absolute inset-0 rounded-2xl"

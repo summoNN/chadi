@@ -15,8 +15,8 @@
   --accent: #e8d5b0;
   --accent-warm: #c9a96e;
   --accent-glow: #ffedcc;
-  --muted: #555555;
-  --dim: #333333;
+  --muted: #9a9a9a;
+  --dim: #444444;
 
   --glow-amber: 0 0 40px rgba(201, 169, 110, 0.3), 0 0 80px rgba(201, 169, 110, 0.1);
   --glow-amber-strong: 0 0 20px rgba(232, 213, 176, 0.6), 0 0 60px rgba(201, 169, 110, 0.3);
@@ -33,6 +33,7 @@ html {
   background: var(--bg);
   color: var(--accent);
   overflow-x: hidden;
+  font-size: 118%;
 }
 
 body {
@@ -64,13 +65,16 @@ html.lenis body {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--dim);
   border-radius: 2px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted);
 }
@@ -91,13 +95,11 @@ html.lenis body {
   content: "";
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
-  );
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px);
   pointer-events: none;
   z-index: 10;
 }
@@ -127,10 +129,26 @@ html.lenis body {
   }
 }
 
+/* Custom scrollbar utility */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--dim);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
 /* TV hint label */
 .tv-hint {
   font-family: var(--font-mono);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
+  color: white;
 }

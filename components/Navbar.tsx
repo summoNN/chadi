@@ -42,7 +42,7 @@ export default function Navbar() {
             <li key={link.id}>
               <button
                 onClick={() => scrollToSection(link.id)}
-                className="tv-hint text-muted hover:text-accent transition-colors duration-300 relative group"
+                className="text-sm font-medium uppercase tracking-widest text-muted hover:text-accent transition-colors duration-300 relative group"
                 data-cursor-hover
               >
                 {link.label}

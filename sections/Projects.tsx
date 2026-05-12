@@ -347,116 +347,115 @@ function VideoModal({
     >
       {/* Panel */}
       <div
-        className="relative w-full max-w-4xl rounded-xl overflow-hidden"
+        className="relative w-full max-w-4xl max-h-[90vh] rounded-xl overflow-hidden flex flex-col"
         style={{
           border: `1px solid ${project.accent}30`,
           boxShadow: `0 0 60px ${project.accent}18, 0 32px 80px rgba(0,0,0,0.7)`,
-          background: "rgba(10,10,10,0.95)",
+          background: "#0a0a0a",
           animation: "modalIn 0.35s cubic-bezier(0.22,1,0.36,1) both",
         }}
       >
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          aria-label="Close modal"
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200"
-          style={{
-            background: "rgba(232,213,176,0.06)",
-            border: "1px solid rgba(232,213,176,0.12)",
-            color: "rgba(232,213,176,0.6)",
-          }}
-          onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLButtonElement).style.background =
-            `${project.accent}22`)
-          }
-          onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLButtonElement).style.background =
-            "rgba(232,213,176,0.06)")
-          }
-          data-cursor-hover
-        >
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path
-              d="M1 1l12 12M13 1L1 13"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-        </button>
-
-        {/* Video */}
-        {project.youtube ? (
-          <div className="w-full aspect-video">
-            <HighQualityIframe src={project.youtube} />
-          </div>
-        ) : (
-          <div
-            className="w-full aspect-video flex items-center justify-center"
-            style={{
-              background: `radial-gradient(ellipse at 40% 40%, ${project.accent}14 0%, transparent 70%)`,
-            }}
+        {/* Modal Header with Close Button */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#080808] z-20">
+          <span className="tv-hint text-[10px] text-accent/60 tracking-widest uppercase">
+            Project Preview
+          </span>
+          <button
+            onClick={onClose}
+            aria-label="Close modal"
+            className="group flex items-center gap-2 tv-hint text-[10px] text-muted hover:text-accent transition-colors duration-200"
+            data-cursor-hover
           >
-            <span
-              className="tv-hint text-[11px]"
-              style={{ color: `${project.accent}60` }}
+            <span>Close</span>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center bg-white/5 border border-white/10 group-hover:bg-accent/10 group-hover:border-accent/30 transition-all">
+              <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M1 1l12 12M13 1L1 13"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+
+        {/* Scrollable Content Area */}
+        <div className="overflow-y-auto flex-1 custom-scrollbar">
+          {/* Video */}
+          {project.youtube ? (
+            <div className="w-full aspect-video">
+              <HighQualityIframe src={project.youtube} />
+            </div>
+          ) : (
+            <div
+              className="w-full aspect-video flex items-center justify-center"
+              style={{
+                background: `radial-gradient(ellipse at 40% 40%, ${project.accent}14 0%, transparent 70%)`,
+              }}
             >
-              No preview available
-            </span>
-          </div>
-        )}
-
-        {/* Info */}
-        <div className="p-6 md:p-8">
-          {/* Meta row */}
-          <div className="flex items-center gap-3 mb-3">
-            <span
-              className="tv-hint text-[10px]"
-              style={{ color: project.accent }}
-            >
-              {project.category}
-            </span>
-            <span
-              className="w-1 h-1 rounded-full"
-              style={{ background: `${project.accent}50` }}
-            />
-            <span className="tv-hint text-[10px] text-muted">
-              {project.year}
-            </span>
-          </div>
-
-          {/* Title */}
-          <h3
-            className="font-display font-bold text-accent text-2xl md:text-3xl leading-tight mb-4"
-          >
-            {project.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-sm text-accent/50 leading-relaxed mb-6">
-            {project.description}
-          </p>
-
-          {/* Tags */}
-          <div className="flex gap-2 flex-wrap">
-            {project.tags.map((tag) => (
               <span
-                key={tag}
-                className="tv-hint text-[9px] px-3 py-1 rounded-full"
-                style={{
-                  border: `1px solid ${project.accent}30`,
-                  color: `${project.accent}80`,
-                }}
+                className="tv-hint text-[11px]"
+                style={{ color: `${project.accent}60` }}
               >
-                {tag}
+                No preview available
               </span>
-            ))}
+            </div>
+          )}
+
+          {/* Info */}
+          <div className="p-6 md:p-10">
+            {/* Meta row */}
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                className="tv-hint text-[11px]"
+                style={{ color: project.accent }}
+              >
+                {project.category}
+              </span>
+              <span
+                className="w-1 h-1 rounded-full opacity-30"
+                style={{ background: project.accent }}
+              />
+              <span className="tv-hint text-[11px] text-muted">
+                {project.year}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h3
+              className="font-display font-bold text-accent text-3xl md:text-4xl leading-tight mb-6"
+            >
+              {project.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-base text-accent/60 leading-relaxed mb-10 max-w-2xl">
+              {project.description}
+            </p>
+
+            {/* Tags */}
+            <div className="flex gap-3 flex-wrap">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="tv-hint text-[10px] px-4 py-2 rounded-full"
+                  style={{
+                    background: `${project.accent}08`,
+                    border: `1px solid ${project.accent}20`,
+                    color: `${project.accent}90`,
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Accent left border */}
         <div
-          className="absolute left-0 top-0 bottom-0 w-0.5"
+          className="absolute left-0 top-0 bottom-0 w-0.5 z-30"
           style={{
             background: project.accent,
             opacity: 0.5,
@@ -689,7 +688,7 @@ export default function Projects() {
                     }}
                     data-cursor-hover
                   >
-                    {cat}
+                    <span className="tv-hint">{cat}</span>
                   </button>
                 ))}
               </div>
@@ -708,18 +707,6 @@ export default function Projects() {
             ))}
           </div>
 
-          {/* Bottom CTA */}
-          <div className="mt-16 flex justify-center">
-            <a
-              href="mailto:hello@videastz.com"
-              className="group inline-flex items-center gap-4 px-8 py-4 glass-card tv-hint text-accent-warm hover:bg-accent-warm/10 transition-all duration-300 rounded"
-              data-cursor-hover
-            >
-              <span className="animate-glow-pulse">●</span>
-              Available for new projects
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-          </div>
         </div>
       </section>
     </>
