@@ -178,7 +178,7 @@ export default function HeroSection() {
           className="tv-hint text-accent/22 tracking-[0.3em]"
           style={{ writingMode: "vertical-lr", fontSize: "0.58rem" }}
         >
-          CREATIVE STUDIO · EST. 2019
+          CREATIVE · DESIGN · MOTION
         </p>
       </div>
 
@@ -191,7 +191,7 @@ export default function HeroSection() {
           className="tv-hint text-accent/20 tracking-[0.3em]"
           style={{ writingMode: "vertical-lr", fontSize: "0.58rem" }}
         >
-          VIDEASTZ · MOTION · 3D
+          VIDEASTE · MOTION · 3D
         </p>
       </div>
 
