@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <p className="tv-hint text-[10px] text-muted">
-          © {year} Videastz. All rights reserved.
+          © {year} made with ❤️ by <a href="https://ilyas-haddad-portfolio.web.app/">Ilyas Haddad</a>
         </p>
       </div>
     </footer>

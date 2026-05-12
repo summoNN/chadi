@@ -16,16 +16,16 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "NIVEA 3D | Bannière site & Story Instagram",
-    category: "Motion Design",
-    year: "2024",
-    tags: ["Branding", "3D", "After Effects"],
-    accent: "#c9a96e",
+    id: 5,
+    title: "Grand Prix de l'Innovation",
+    category: "Editing & Shooting",
+    year: "2019",
+    tags: ["Music", "VFX", "Compositing"],
+    accent: "#d4a0e8",
     description:
-      "Publicité promotionnelle pour NIVEA, initialement conçue comme une bannière de site web animée, optimisée pour une réutilisation en Story Instagram. Réalisé avec After Effects et Element 3D, ce projet démontre la capacité à créer des animations sophistiquées en 3D (modélisation, textures, et animation de texte) tout en respectant scrupuleusement la charte graphique de la marque. Le défi a été de garantir une qualité de rendu élevée tout en assurant une intégration fluide et un branding instantanément reconnaissable sur différents formats numériques.",
+      "Reportage Événementiel : Couverture du Grand Prix de l'Innovation 2019 (Prise de Vue & Montage) J'ai participé à la production de la vidéo récapitulative du Grand Prix de l'Innovation de la Sécurité sociale 2019, travaillant au sein d'une équipe de production dédiée. Mes rôles principaux comprenaient : Prise de Vue : Collaboration avec l'équipe pour la captation des moments clés, des interviews et de l'ambiance générale de l'événement. J'ai contribué à obtenir des plans dynamiques et pertinents sous la direction de l'équipe. Montage Vidéo : J'ai structuré le contenu pour créer un reportage concis et engageant, mettant en avant les moments forts de la cérémonie et des présentations. Mon rôle a été d'assurer un rythme soutenu et une transition fluide entre les différentes séquences captées par l'équipe. Ce projet démontre ma capacité à travailler efficacement en équipe pour la couverture d'événements institutionnels majeurs, en délivrant une production vidéo qui répond aux objectifs de communication du client.",
     aspectRatio: "aspect-[16/9]",
-    youtube: "https://www.youtube.com/embed/vtrqMwvIS3s",
+    youtube: "https://www.youtube.com/embed/yYFUASSZ4F0",
   },
   {
     id: 2,
@@ -61,18 +61,6 @@ const projects: Project[] = [
       "Motion Design 3D Avancé & Composition Sonore Originale – Générique de Série (ESEC) Ce projet a été conçu pendant mes études à l'ESEC et avait pour objectif de créer un générique de film ou de série télévisée de qualité professionnelle. Il met en lumière ma polyvalence technique et créative : Conception 3D & Modélisation : J'ai utilisé Cinema 4D pour modéliser les objets et l'environnement 3D nécessaire au concept du générique. Motion Design & VFX : L'animation et l'intégration finale ont été réalisées dans After Effects en utilisant le moteur de rendu 3D temps réel Element 3D, assurant un rendu dynamique et complexe de l'environnement virtuel. Création Sonore Originale : J'ai produit la bande sonore (musique et effets) directement sur Ableton Live, en y intégrant des éléments vocaux acquis via Splice pour finaliser l'ambiance sonore du générique (titres, ambiance, effets). Ce projet démontre une expertise approfondie dans la chaîne de production du Motion Design 3D, de la modélisation à l'animation, en passant par la composition visuelle et la création audio.",
     aspectRatio: "aspect-[16/9]",
     youtube: "https://www.youtube.com/embed/AT9HPAT1Bh8",
-  },
-  {
-    id: 5,
-    title: "Grand Prix de l'Innovation",
-    category: "Editing & Shooting",
-    year: "2019",
-    tags: ["Music", "VFX", "Compositing"],
-    accent: "#d4a0e8",
-    description:
-      "Reportage Événementiel : Couverture du Grand Prix de l'Innovation 2019 (Prise de Vue & Montage) J'ai participé à la production de la vidéo récapitulative du Grand Prix de l'Innovation de la Sécurité sociale 2019, travaillant au sein d'une équipe de production dédiée. Mes rôles principaux comprenaient : Prise de Vue : Collaboration avec l'équipe pour la captation des moments clés, des interviews et de l'ambiance générale de l'événement. J'ai contribué à obtenir des plans dynamiques et pertinents sous la direction de l'équipe. Montage Vidéo : J'ai structuré le contenu pour créer un reportage concis et engageant, mettant en avant les moments forts de la cérémonie et des présentations. Mon rôle a été d'assurer un rythme soutenu et une transition fluide entre les différentes séquences captées par l'équipe. Ce projet démontre ma capacité à travailler efficacement en équipe pour la couverture d'événements institutionnels majeurs, en délivrant une production vidéo qui répond aux objectifs de communication du client.",
-    aspectRatio: "aspect-[16/9]",
-    youtube: "https://www.youtube.com/embed/yYFUASSZ4F0",
   },
   {
     id: 6,
@@ -134,9 +122,8 @@ const projects: Project[] = [
     aspectRatio: "aspect-[16/9]",
     youtube: "https://www.youtube.com/embed/pR9piA1Xenw",
   },
-
   {
-    id: 99,
+    id: 11,
     title: "Armel et Moez",
     category: "Sound Mixing",
     year: "2022",
@@ -146,6 +133,29 @@ const projects: Project[] = [
       "Mixage Son Professionnel (Pro Tools) – Court-Métrage Académique Dans le cadre de mes études de cinéma à l'ESEC, mon rôle principal sur le projet 'Armel et Moez' a été celui de Mixeur Son. J'ai été responsable de l'intégralité de la post-production audio, en utilisant le logiciel standard de l'industrie Pro Tools. Mon travail a consisté à : Nettoyer et Égaliser les dialogues. Intégrer et Équilibrer la musique originale et les effets sonores (SFX). Réaliser le Mixage Final Stéréo (ou 5.1, si applicable) en respectant les normes de niveau sonore (LUFS) pour garantir une qualité sonore professionnelle et cohérente avec l'ambiance visuelle du film. Ce projet met en évidence ma spécialisation et ma maîtrise technique dans le design et le mixage sonore professionnel pour la production cinématographique.",
     aspectRatio: "aspect-[16/9]",
     youtube: "https://www.youtube.com/embed/-6eQMvnz8fA",
+  },
+  {
+    id: 12,
+    title: "VoidWalkers",
+    category: "Motion Design",
+    year: "2024",
+    tags: ["Branding", "3D", "After Effects"],
+    accent: "#e8b4a0",
+    description: "Démonstration de Compétences en Motion Design Créatif 'VoidWalkers'.",
+    aspectRatio: "aspect-[16/9]",
+    youtube: "https://www.youtube.com/embed/GQ49pyi7Z4I",
+  },
+  {
+    id: 1,
+    title: "NIVEA 3D | Bannière site & Story Instagram",
+    category: "Motion Design",
+    year: "2024",
+    tags: ["Branding", "3D", "After Effects"],
+    accent: "#c9a96e",
+    description:
+      "Publicité promotionnelle pour NIVEA, initialement conçue comme une bannière de site web animée, optimisée pour une réutilisation en Story Instagram. Réalisé avec After Effects et Element 3D, ce projet démontre la capacité à créer des animations sophistiquées en 3D (modélisation, textures, et animation de texte) tout en respectant scrupuleusement la charte graphique de la marque. Le défi a été de garantir une qualité de rendu élevée tout en assurant une intégration fluide et un branding instantanément reconnaissable sur différents formats numériques.",
+    aspectRatio: "aspect-[16/9]",
+    youtube: "https://www.youtube.com/embed/vtrqMwvIS3s",
   },
 ];
 

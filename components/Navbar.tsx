@@ -5,8 +5,9 @@ import { scrollToSection } from "@/lib/scroll";
 import Logo from "@/public/logo.gif";
 const navLinks = [
   { label: "Home", id: "home" },
-  { label: "About", id: "about" },
   { label: "Projects", id: "projects" },
+  { label: "Hobbies", id: "hobbies" },
+  { label: "About", id: "about" },
 ];
 
 export default function Navbar() {
@@ -42,7 +43,7 @@ export default function Navbar() {
             <li key={link.id}>
               <button
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium uppercase tracking-widest text-muted hover:text-accent transition-colors duration-300 relative group"
+                className={`text-sm font-medium uppercase tracking-widest text-muted hover:text-accent transition-colors duration-300 relative group ${scrolled && "text-white"}`}
                 data-cursor-hover
               >
                 {link.label}
